@@ -8,16 +8,17 @@ interface IAction<T, P> extends Action<T> {
 }
 
 export interface IAddTodo { id: number, text: string }
+export interface ISetVisibilityFilter { filter: VisibilityFiltersEnum }
+export interface IToggleTodo { id: number }
+
 export interface IAddTodoAction {
     (id: number, text: string): IAction<actionTypes.ADD_TODO, IAddTodo>
 }
 
-export interface ISetVisibilityFilter { filter: VisibilityFiltersEnum }
 export interface ISetVisibilityFilterAction {
     (filter: VisibilityFiltersEnum): IAction<actionTypes.SET_VISIBILITY_FILTER, ISetVisibilityFilter>
 }
 
-export interface IToggleTodo { id: number }
 export interface IToggleTodoAction {
     (id: number): IAction<actionTypes.TOGGLE_TODO, IToggleTodo>
 }
