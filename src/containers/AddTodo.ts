@@ -18,7 +18,7 @@ interface IMapDispatchToProps {
     }
 }
 
-const mapDispatchToProps: IMapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps: IMapDispatchToProps = dispatch => ({
     handleSubmit: ({e, nextTodoId, input}) => {
         e.preventDefault()
         if (!input.value.trim()) {
